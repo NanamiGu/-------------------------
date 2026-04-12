@@ -1,0 +1,153 @@
+:root {
+    --accent: #c5a059;
+    --dark: #121212;
+    --bg: #1a1a1a;
+    --text-light: #f4f4f4;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+body { background: var(--bg); color: var(--text-light); scroll-behavior: smooth; }
+
+/* Navbar Luxury Styling */
+.navbar {
+    background: rgba(18, 18, 18, 0.95); backdrop-filter: blur(10px);
+    position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.nav-container { display: flex; justify-content: space-between; align-items: center; padding: 15px 5%; }
+
+.logo-badge { 
+    width: 45px; height: 45px; border: 2px solid var(--accent); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--accent); font-weight: 700; font-size: 1.2rem;
+}
+.logo-text { font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-left: 12px; }
+.logo-text span { color: var(--accent); }
+.brand { display: flex; align-items: center; }
+
+.search-bar { position: relative; width: 40%; }
+.search-bar input {
+    width: 100%; padding: 12px 15px 12px 45px; border-radius: 30px;
+    background: #252525; border: 1px solid transparent; color: white; transition: 0.3s;
+}
+.search-bar input:focus { border-color: var(--accent); outline: none; background: #333; }
+.search-bar i { position: absolute; left: 15px; top: 13px; color: var(--accent); }
+
+.mobile-menu-toggle {
+    display: none;
+    border: 1px solid rgba(255,255,255,0.18);
+    background: rgba(255,255,255,0.04);
+    color: var(--accent);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+}
+
+.category-scroller {
+    display: flex; gap: 25px; padding: 12px 5%; background: var(--dark);
+    overflow-x: auto; white-space: nowrap; scrollbar-width: none;
+}
+.category-scroller a { color: #888; text-decoration: none; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; }
+.category-scroller a:hover { color: var(--accent); }
+
+.category-scroller.open { display: flex; }
+
+@media (max-width: 768px) {
+    .nav-container {
+        flex-wrap: wrap;
+        gap: 12px;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .brand {
+        flex: 0 0 auto;
+    }
+    .mobile-menu-toggle {
+        display: inline-flex;
+        flex: 0 0 auto;
+        width: 50px;
+        height: 50px;
+        justify-content: center;
+        align-self: center;
+    }
+    .search-bar {
+        flex: 1 1 auto;
+        min-width: 0;
+    }
+    .search-bar input {
+        width: 100%;
+    }
+    .category-scroller {
+        display: none;
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 12px 5%;
+        background: rgba(18,18,18,0.98);
+        border-top: 1px solid rgba(255,255,255,0.05);
+    }
+    .category-scroller.open {
+        display: flex;
+    }
+    .category-scroller a {
+        white-space: normal;
+        text-align: center;
+        flex: 1 1 45%;
+        min-width: 120px;
+    }
+    .hero h1 { font-size: 2.2rem; }
+}
+
+/* Hero Branding */
+.hero {
+    height: 50vh; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=2000');
+    background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center;
+}
+.hero-inner { text-align: center; }
+.hero h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; color: var(--accent); }
+.location-tag { color: white; font-size: 0.9rem; letter-spacing: 2px; text-transform: uppercase; }
+
+/* Menu Grid Card Design */
+.no-results { display: none; padding: 40px 5%; text-align: center; color: #ccc; }
+.no-results i { font-size: 2rem; color: var(--accent); }
+.no-results p { margin-top: 14px; color: #aaa; font-size: 0.95rem; }
+.no-results-visible, .no-results:not(.no-results-hidden) { display: block; }
+
+.menu-section { padding: 60px 5%; }
+.section-heading { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 40px; border-left: 4px solid var(--accent); padding-left: 20px; }
+
+.dish-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px; }
+.dish-card { background: #222; border-radius: 20px; overflow: hidden; position: relative; transition: 0.4s; }
+.dish-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+
+.dish-img { height: 220px; background-size: cover; background-position: center; filter: grayscale(20%); }
+.dish-card:hover .dish-img { filter: grayscale(0%); }
+
+.dish-info { padding: 25px; text-align: center; }
+.dish-info h3 { font-size: 1.2rem; margin-bottom: 15px; }
+.dish-info p { color: #777; font-size: 0.85rem; margin-bottom: 15px; }
+.price { background: var(--accent); color: #000; padding: 6px 18px; border-radius: 30px; font-weight: 700; font-size: 0.9rem; }
+
+/* Ribbon for Special Dishes */
+.ribbon { position: absolute; top: 15px; right: 15px; background: #e74c3c; color: white; padding: 5px 12px; border-radius: 5px; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; }
+
+/* Call FAB */
+.contact-fab {  display: flex; justify-content: end; margin-right: 50px; position: fixed; bottom: 30px; right: 50px; z-index: 2000; } 
+.call-btn { background: var(--accent); color: #000; text-decoration: none; padding: 15px 35px; border-radius: 50px; font-weight: 700; box-shadow: 0 10px 20px rgba(197, 160, 89, 0.4); display: flex; align-items: center; gap: 10px; }
+
+
+/* Footer */
+.main-footer { background: var(--dark); padding: 80px 5% 40px; text-align: center; border-top: 1px solid #333; }
+.footer-grid { display: flex; justify-content: space-around; max-width: 800px; margin: 0 auto 40px; }
+.foot-col h3 { color: var(--accent); margin-bottom: 15px; font-size: 1rem; text-transform: uppercase; }
+.copyright { font-size: 0.8rem; color: #555; }
+.foot-col a { color: bisque; text-decoration: none; font-size: 0.9rem; transition: 0.3s; }
+.social-icon{display: flex;gap: 20px; justify-content: center;} 
+/* الأيقونات */
+.social-icons i {font-size: 80px;color: #fff; transition: 0.8s ease;}
+.foot-col a:hover, .social-icons i:hover { 
+    color: var(--accent); 
+    transform: translateY(-3px); 
+

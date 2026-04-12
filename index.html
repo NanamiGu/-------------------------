@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Woody Grill Algiers | Turkish Charcoal Excellence</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="brand">
+                <div class="logo-badge">WG</div>
+                <div class="logo-text">WOODY <span>GRILL</span></div>
+            </div>
+            <button class="mobile-menu-toggle" aria-expanded="false" aria-controls="mobileNav" type="button">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" id="menuSearch" aria-label="Search dishes" placeholder="Search our 50+ authentic dishes..." onkeyup="filterMenu()">
+            </div>
+        </div>
+        <div class="category-scroller" id="mobileNav">
+            <a href="#cold">Cold Meze</a>
+            <a href="#hot">Soups</a>
+            <a href="#grills">Charcoal Grills</a>
+            <a href="#stews">Daily Stews</a>
+            <a href="#desserts">Sweets</a>
+            <a href="#drinks">Drinks</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-inner">
+            <span class="location-tag"><i class="fas fa-map-marker-alt"></i> Pasteur Avenue, Alger Centre</span>
+            <h1>The Art of Turkish Grilling</h1>
+            <p>Authentic flavors, charcoal-fired perfection, and legendary hospitality.</p>
+        </div>
+    </header>
+
+    <main class="menu-wrapper">
+        <section id="cold" class="menu-section">
+            <h2 class="section-heading">Cold Meze</h2>
+            <div class="dish-grid">
+                <div class="dish-card" data-name="salade variee">
+                    <div class="dish-img dish-img-salade-variee"></div>
+                    <div class="dish-info"><h3>Salade Variée</h3><span class="price">350 / 600 DZD</span></div>
+                </div>
+                <div class="dish-card" data-name="haydari garlic yogurt">
+                    <div class="dish-img" style="background-image: url('https://images.unsplash.com/photo-1571115177098-24ec42ed204d?auto=format&fit=crop&w=500')"></div>
+                    <div class="dish-info"><h3>Haydari</h3><span class="price">450 / 700 DZD</span></div>
+                </div>
+                <div class="dish-card" data-name="coban salati shepherd">
+                    <div class="dish-img" style="background-image: url('https://images.unsplash.com/photo-1623428187969-5da2dcea5ebf?auto=format&fit=crop&w=500')"></div>
+                    <div class="dish-info"><h3>Çoban Salatı</h3><span class="price">450 / 700 DZD</span></div>
+                </div>
+                <div class="dish-card" data-name="baba ghanoush eggplant">
+                    <div class="dish-img" style="background-image: url('https://images.unsplash.com/photo-1598514982205-f36b96d1e8d4?auto=format&fit=crop&w=500')"></div>
+                    <div class="dish-info"><h3>Baba Ghanoush</h3><span class="price">550 / 900 DZD</span></div>
+                </div>
+                <div class="dish-card" data-name="salade de thon tuna">
+                    <div class="dish-img" style="background-image: url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=500')"></div>
+                    <div class="dish-info"><h3>Salade de Thon</h3><span class="price">600 / 950 DZD</span></div>
+                </div>
+                <div class="dish-card" data-name="salade ezme spice spicy">
+                    <div class="dish-img" style="background-image: url('https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=500')"></div>
+                    <div class="dish-info"><h3>Salade Ezme Épicé</h3><span class="price">550 / 900 DZD</span></div>
+                </div>
+                <div class="dish-card" data-name="cacik cucumber yogurt">
+                    <div class="dish-img" style="background-image: url('https://images.unsplash.com/photo-1610614810013-40aaecad27d7?auto=format&fit=crop&w=500')"></div>
+                    <div class="dish-info"><h3>Cacik</h3><span class="price">500 DZD</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="hot" class="menu-section">
+            <h2 class="section-heading">Entrées Chaudes</h2>
+            <div class="dish-grid">
+                <div class="dish-card" data-name="soupe du jour soup day">
+                    <div class="dish-img" style="background-image: url('https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=500')"></div>
+                    <div class="dish-info">
+                        <h3>Soupe du Jour</h3>
+                        <p>Freshly prepared soup of the day.</p>
+                        <span class="price">200 / 300 DZD</span>
+                    </div>
+                </div>
+
+                <div class="dish-card" data-name="mercimek corbasi lentil soup">
+                    <div class="dish-img" style="background-image: url('https://images.unsplash.com/photo-1547592115-f99636c93600?auto=format&fit=crop&w=500')"></div>
+                    <div class="dish-info">
+                        <h3>Mercimek Çorbası</h3>
+                        <p>Traditional Turkish red lentil soup.</p>
+                        <span class="price">350 / 500 DZD</span>
+                    </div>
+                </div>
+
+                <div class="dish-card" data-name="ezogelin corbasi soup bulgur">
+                    <div class="dish-img" style="background-image: url('https://images.unsplash.com/photo-1630409351241-e90e7f5e434d?auto=format&fit=crop&w=500')"></div>
+                    <div class="dish-info">
+                        <h3>Ezogelin Çorbası</h3>
+                        <p>Lentil, bulgur, and dried mint soup.</p>
+                        <span class="price">350 / 500 DZD</span>
+                    </div>
+                </div>
+
+                <div class="dish-card" data-name="tavuk corbasi chicken soup">
+                    <div class="dish-img" style="background-image: url('https://images.unsplash.com/photo-1603105037880-880cd4edfb0d?auto=format&fit=crop&w=500')"></div>
+                    <div class="dish-info">
+                        <h3>Tavuk Çorbasى</h3>
+                        <p>Creamy Turkish chicken soup.</p>
+                        <span class="price">350 / 500 DZD</span>
+                    </div>
+                </div>
+
+                <div class="dish-card" data-name="kalamar calamari fried">
+                    <div class="dish-img" style="background-image: url('https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=500')"></div>
+                    <div class="dish-info">
+                        <h3>Kalamar</h3>
+                        <p>Golden fried calamari rings.</p>
+                        <span class="price">350 / 500 DZD</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="grills" class="menu-section">
+            <h2 class="section-heading">Grillades & Brochettes</h2>
+            <div class="dish-grid">
+                <div class="dish-card premium" data-name="adana kebap spicy lamb meat">
+                    <div class="ribbon">Best Seller</div>
+                    <div class="dish-img" style="background-image: url('https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?auto=format&fit=crop&w=500')"></div>
+                    <div class="dish-info">
+                        <h3>Adana Kebap</h3>
+                        <p>Spicy hand-minced lamb, charcoal grilled.</p>
+                        <span class="price">1200 DZD</span>
+                    </div>
+                </div>
+
+                <div class="dish-card premium" data-name="mixed kebab platter meat selection">
+                    <div class="ribbon" style="background: #c5a059; color: #000;">Chef's Choice</div>
+                    <div class="dish-img" style="background-image: url('https://images.unsplash.com/photo-1603360946369-dc9bb0a588bb?auto=format&fit=crop&w=500')"></div>
+                    <div class="dish-info">
+                        <h3>Mixed Kebab (Premium)</h3>
+                        <p>A grand selection of our finest charcoal grills.</p>
+                        <span class="price">1500 DZD</span>
+                    </div>
+                </div>
+
+                <div class="dish-card" data-name="iskender kebab doner meat yogurt">
+                    <div class="dish-img" style="background-image: url('https://images.unsplash.com/photo-1644781615082-329432f9136e?auto=format&fit=crop&w=500')"></div>
+                    <div class="dish-info">
+                        <h3>Iskender Kebab</h3>
+                        <p>Döner meat over pita with tomato sauce & yogurt.</p>
+                        <span class="price">1500 DZD</span>
+                    </div>
+                </div>
+
+                <div class="dish-card" data-name="urfa kebap lamb meat classic">
+                    <div class="dish-img" style="background-image: url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=500')"></div>
+                    <div class="dish-info">
+                        <h3>Urfa Kebap</h3>
+                        <p>Classic non-spicy hand-minced lamb skewer.</p>
+                        <span class="price">1200 DZD</span>
+                    </div>
+                </div>
+
+                <div class="dish-card" data-name="beyti kebab wrap meat">
+                    <div class="dish-img" style="background-image: url('https://images.unsplash.com/photo-1626082869991-070f23df9a79?auto=format&fit=crop&w=500')"></div>
+                    <div class="dish-info">
+                        <h3>Beyti-Kebab</h3>
+                        <p>Urfa/Adana wrapped in lavash bread with yogurt.</p>
+                        <span class="price">1300 DZD</span>
+                    </div>
+                </div>
+
+                <div class="dish-card" data-name="doner kebab lamb beef meat">
+                    <div class="dish-img" style="background-image: url('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=500')"></div>
+                    <div class="dish-info">
+                        <h3>Döner-Kebab</h3>
+                        <p>Traditional sliced lamb and beef döner.</p>
+                        <span class="price">1300 DZD</span>
+                    </div>
+                </div>
+
+                <div class="dish-card" data-name="chicken doner poulet">
+                    <div class="dish-img" style="background-image: url('https://images.unsplash.com/photo-1532636875304-0c89119d9b4d?auto=format&fit=crop&w=500')"></div>
+                    <div class="dish-info">
+                        <h3>Chicken-Döner</h3>
+                        <p>Marinated sliced chicken breast.</p>
+                        <span class="price">1300 DZD</span>
+                    </div>
+                </div>
+
+                <div class="dish-card" data-name="chicken wings ailes poulet grill">
+                    <div class="dish-img" style="background-image: url('https://images.unsplash.com/photo-1567620905732-2d1ec7bb7445?auto=format&fit=crop&w=500')"></div>
+                    <div class="dish-info">
+                        <h3>Chicken Wings</h3>
+                        <p>Crispy charcoal-grilled wings.</p>
+                        <span class="price">1000 DZD</span>
+                    </div>
+                </div>
+
+                <div class="dish-card" data-name="poulet kebab chicken skewer">
+                    <div class="dish-img" style="background-image: url('https://images.unsplash.com/photo-1516684732162-798a0062be99?auto=format&fit=crop&w=500')"></div>
+                    <div class="dish-info">
+                        <h3>Poulet-Kebab</h3>
+                        <span class="price">1200 DZD</span>
+                    </div>
+                </div>
+
+                <div class="dish-card" data-name="kofte meatballs grilled">
+                    <div class="dish-img" style="background-image: url('https://images.unsplash.com/photo-1529692236671-f1f6e9460272?auto=format&fit=crop&w=500')"></div>
+                    <div class="dish-info">
+                        <h3>Kofte</h3>
+                        <p>Turkish style grilled meatballs.</p>
+                        <span class="price">1000 DZD</span>
+                    </div>
+                </div>
+
+                <div class="dish-card" data-name="cuisses de poulet chicken thighs">
+                    <div class="dish-img" style="background-image: url('https://images.unsplash.com/photo-1606728035253-49df8bbd6dee?auto=format&fit=crop&w=500')"></div>
+                    <div class="dish-info">
+                        <h3>Cuisses de Poulet Désossées</h3>
+                        <span class="price">1000 DZD</span>
+                    </div>
+                </div>
+
+                <div class="dish-card" data-name="blanc de poulet chicken breast">
+                    <div class="dish-img" style="background-image: url('https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=500')"></div>
+                    <div class="dish-info">
+                        <h3>Blanc de Poulet Émincé</h3>
+                        <span class="price">1000 DZD</span>
+                    </div>
+                </div>
+
+                <div class="dish-card" data-name="kebab mixte mixed platter">
+                    <div class="dish-img" style="background-image: url('https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&w=500')"></div>
+                    <div class="dish-info">
+                        <h3>Kebab-Mixte</h3>
+                        <span class="price">1400 DZD</span>
+                    </div>
+                </div>
+
+                <div class="dish-card" data-name="frites fries chips side">
+                    <div class="dish-img" style="background-image: url('https://images.unsplash.com/photo-1573082883905-1896003abc74?auto=format&fit=crop&w=500')"></div>
+                    <div class="dish-info">
+                        <h3>Assiette de Frites</h3>
+                        <p>Golden potato fries.</p>
+                        <span class="price">200 DZD</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="stews" class="menu-section">
+            <h2 class="section-heading">Ragoûts Quotidiens</h2>
+            <div class="dish-grid">
+                <div class="dish-card premium" data-name="souris agneau lamb shank meat braised">
+                    <div class="ribbon">Premium Choice</div>
+                    <div class="dish-img" style="background-image: url('https://images.unsplash.com/photo-1544124499-58912cbddada?auto=format&fit=crop&w=500')"></div>
+                    <div class="dish-info">
+                        <h3>Souris d'Agneau</h3>
+                        <p>Melt-in-your-mouth braised lamb shank.</p>
+                        <span class="price">2000 DZD</span>
+                    </div>
+                </div>
+
+                <div class="dish-card" data-name="alinazik meat eggplant puree yogurt">
+                    <div class="dish-img" style="background-image: url('https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?auto=format&fit=crop&w=500')"></div>
+                    <div class="dish-info">
+                        <h3>Alinazik</h3>
+                        <span class="price">2000 DZD</span>
+                    </div>
+                </div>
+
+                <div class="dish-card" data-name="hassan pasa kofte meatballs potato cheese">
+                    <div class="dish-img" style="background-image: url('https://images.unsplash.com/photo-1529692236671-f1f6e9460272?auto=format&fit=crop&w=500')"></div>
+                    <div class="dish-info">
+                        <h3>Hassan Paşa Köfte</h3>
+                        <span class="price">1250 DZD</span>
+                    </div>
+                </div>
+
+                <div class="dish-card" data-name="moussaka eggplant meat casserole">
+                    <div class="dish-img" style="background-image: url('https://images.unsplash.com/photo-1616501268209-6f419d89355f?auto=format&fit=crop&w=500')"></div>
+                    <div class="dish-info">
+                        <h3>Moussaka</h3>
+                        <span class="price">1300 DZD</span>
+                    </div>
+                </div>
+
+                <div class="dish-card" data-name="karniyarik stuffed eggplant meat">
+                    <div class="dish-img" style="background-image: url('https://images.unsplash.com/photo-1541014741259-de529411b96a?auto=format&fit=crop&w=500')"></div>
+                    <div class="dish-info">
+                        <h3>Karniyarik</h3>
+                        <span class="price">1200 DZD</span>
+                    </div>
+                </div>
+
+                <div class="dish-card" data-name="izmir kofte meatball stew potato">
+                    <div class="dish-img" style="background-image: url('https://images.unsplash.com/photo-1594179202021-586b2321d044?auto=format&fit=crop&w=500')"></div>
+                    <div class="dish-info">
+                        <h3>Izmir Köfte</h3>
+                        <span class="price">1250 DZD</span>
+                    </div>
+                </div>
+
+                <div class="dish-card" data-name="spicy chicken poulet epicé cheese">
+                    <div class="dish-img" style="background-image: url('https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&w=500')"></div>
+                    <div class="dish-info">
+                        <h3>Spicy Chicken</h3>
+                        <span class="price">1250 DZD</span>
+                    </div>
+                </div>
+
+                <div class="dish-card" data-name="poulet farci stuffed chicken spinach">
+                    <div class="dish-img" style="background-image: url('https://images.unsplash.com/photo-1626645272640-9b39d9b4dd98?auto=format&fit=crop&w=500')"></div>
+                    <div class="dish-info">
+                        <h3>Poulet Farci</h3>
+                        <span class="price">1100 DZD</span>
+                    </div>
+                </div>
+
+                <div class="dish-card" data-name="ragouts viande meat stew">
+                    <div class="dish-img" style="background-image: url('https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=500')"></div>
+                    <div class="dish-info">
+                        <h3>Ragoûts de Viande</h3>
+                        <span class="price">1000 DZD</span>
+                    </div>
+                </div>
+
+                <div class="dish-card" data-name="ragouts poulet chicken stew">
+                    <div class="dish-img" style="background-image: url('https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=500')"></div>
+                    <div class="dish-info">
+                        <h3>Ragoûts de Poulet</h3>
+                        <span class="price">900 DZD</span>
+                    </div>
+                </div>
+
+                <div class="dish-card" data-name="lahmajoum lahmajun meat pizza flatbread">
+                    <div class="dish-img" style="background-image: url('https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=500')"></div>
+                    <div class="dish-info">
+                        <h3>Lahmajoum</h3>
+                        <p>Traditional Turkish meat flatbread.</p>
+                        <span class="price">600 DZD</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="desserts" class="menu-section">
+            <h2 class="section-heading">Desserts (Sweets)</h2>
+            <div class="dish-grid">
+                <div class="dish-card premium" data-name="kunafa kounafa cheese sweet dessert kounafee">
+                    <div class="ribbon">Must Try</div>
+                    <div class="dish-img" style="background-image: url('https://images.unsplash.com/photo-1582236314815-1867f154de64?auto=format&fit=crop&w=500')"></div>
+                    <div class="dish-info">
+                        <h3>Turkish Kunafa</h3>
+                        <p>Warm cheese pastry soaked in sweet syrup with pistachios.</p>
+                        <span class="price">500 DZD</span>
+                    </div>
+                </div>
+
+                <div class="dish-card" data-name="baklawa baklava honey nuts sweet">
+                    <div class="dish-img" style="background-image: url('https://images.unsplash.com/photo-1519197924294-4ba991a11128?auto=format&fit=crop&w=500')"></div>
+                    <div class="dish-info">
+                        <h3>Baklawa</h3>
+                        <p>Layers of phyllo pastry with chopped nuts and honey.</p>
+                        <span class="price">150 DZD</span>
+                    </div>
+                </div>
+
+                <div class="dish-card" data-name="muhallebi pudding milk dessert">
+                    <div class="dish-img" style="background-image: url('https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=500')"></div>
+                    <div class="dish-info">
+                        <h3>Muhallebi</h3>
+                        <p>Traditional Turkish creamy milk pudding.</p>
+                        <span class="price">500 DZD</span>
+                    </div>
+                </div>
+
+                <div class="dish-card" data-name="creme brulee custard sugar">
+                    <div class="dish-img" style="background-image: url('https://images.unsplash.com/photo-1470333104439-444d00419612?auto=format&fit=crop&w=500')"></div>
+                    <div class="dish-info">
+                        <h3>Crème Brûlée</h3>
+                        <p>Rich custard base topped with a layer of hardened caramelized sugar.</p>
+                        <span class="price">550 DZD</span>
+                    </div>
+                </div>
+
+                <div class="dish-card" data-name="tiramisu coffee cake dessert">
+                    <div class="dish-img" style="background-image: url('https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=500')"></div>
+                    <div class="dish-info">
+                        <h3>Tiramisu</h3>
+                        <p>Classic coffee-flavored Italian dessert.</p>
+                        <span class="price">500 DZD</span>
+                    </div>
+                </div>
+
+                <div class="dish-card" data-name="flan caramel custard dessert">
+                    <div class="dish-img" style="background-image: url('https://images.unsplash.com/photo-1590004953392-5aba2e785943?auto=format&fit=crop&w=500')"></div>
+                    <div class="dish-info">
+                        <h3>Flan au Caramel</h3>
+                        <span class="price">500 DZD</span>
+                    </div>
+                </div>
+
+                <div class="dish-card" data-name="mousse au chocolat chocolate dessert">
+                    <div class="dish-img" style="background-image: url('https://images.unsplash.com/photo-1541783245831-57d6fb0926d3?auto=format&fit=crop&w=500')"></div>
+                    <div class="dish-info">
+                        <h3>Mousse au Chocolat</h3>
+                        <span class="price">500 DZD</span>
+                    </div>
+                </div>
+
+                <div class="dish-card" data-name="tarte chocolat citron lemon chocolate tart">
+                    <div class="dish-img" style="background-image: url('https://images.unsplash.com/photo-1519915028121-7d3463d20b13?auto=format&fit=crop&w=500')"></div>
+                    <div class="dish-info">
+                        <h3>Tarte au Chocolat / Citron</h3>
+                        <span class="price">500 DZD</span>
+                    </div>
+                </div>
+
+                <div class="dish-card" data-name="salade de fruits fresh fruit salad">
+                    <div class="dish-img" style="background-image: url('https://images.unsplash.com/photo-1490818387583-1baba5e638af?auto=format&fit=crop&w=500')"></div>
+                    <div class="dish-info">
+                        <h3>Salade de Fruits</h3>
+                        <span class="price">550 DZD</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="drinks" class="menu-section">
+            <h2 class="section-heading">Boissons</h2>
+            <div class="dish-grid">
+                <div class="dish-card" data-name="the turc turkish tea free offert">
+                    <div class="ribbon" style="background: #27ae60;">Offert</div>
+                    <div class="dish-img" style="background-image: url('https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=500')"></div>
+                    <div class="dish-info">
+                        <h3>Thé Turc</h3>
+                        <p>Traditional Turkish tea, served hot.</p>
+                        <span class="price">Gratuit</span>
+                    </div>
+                </div>
+
+                <div class="dish-card" data-name="cafe frappuccino coffee">
+                    <div class="dish-img" style="background-image: url('https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=500')"></div>
+                    <div class="dish-info">
+                        <h3>Café Frappuccino</h3>
+                        <span class="price">150 DZD</span>
+                    </div>
+                </div>
+
+                <div class="dish-card" data-name="jus orange orange juice frais">
+                    <div class="dish-img" style="background-image: url('https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&w=500')"></div>
+                    <div class="dish-info">
+                        <h3>Jus d'Orange Frais</h3>
+                        <p>100% Freshly squeezed.</p>
+                        <span class="price">300 DZD</span>
+                    </div>
+                </div>
+
+                <div class="dish-card" data-name="jus citron lemon juice frais">
+                    <div class="dish-img" style="background-image: url('https://images.unsplash.com/photo-1523472721958-978152f4d69b?auto=format&fit=crop&w=500')"></div>
+                    <div class="dish-info">
+                        <h3>Jus de Citron Frais</h3>
+                        <span class="price">300 DZD</span>
+                    </div>
+                </div>
+
+                <div class="dish-card" data-name="jus cocktail fresh mixed">
+                    <div class="dish-img" style="background-image: url('https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=500')"></div>
+                    <div class="dish-info">
+                        <h3>Jus de Cocktail</h3>
+                        <span class="price">300 DZD</span>
+                    </div>
+                </div>
+
+                <div class="dish-card" data-name="coca cola soda canette">
+                    <div class="dish-img" style="background-image: url('https://images.unsplash.com/photo-1622708759828-899ca1028639?auto=format&fit=crop&w=500')"></div>
+                    <div class="dish-info">
+                        <h3>Canette (Assorted)</h3>
+                        <p>Soda selection / Coca-Cola</p>
+                        <span class="price">110 DZD</span>
+                    </div>
+                </div>
+
+                <div class="dish-card" data-name="eau gazeuse sparkling water">
+                    <div class="dish-img" style="background-image: url('https://images.unsplash.com/photo-1548964077-9566861182d3?auto=format&fit=crop&w=500')"></div>
+                    <div class="dish-info">
+                        <h3>Eau Gazeuse</h3>
+                        <span class="price">150 DZD</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="contact-fab">
+        <a href="tel:0557904280" class="call-btn"><i class="fas fa-phone-alt"></i> Call to Order</a>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-grid">
+            <div class="foot-col">
+                <h3>Find Us</h3>
+                <a href="https://maps.app.goo.gl/3AvsP5ZkWxiRo4Aa7" target="_blank">Pasteur Avenue, Alger Centre 16000</a>
+            </div>
+            <div class="foot-col">
+                <h3>Follow Us</h3>
+                <div class="social-icon">
+                    <a href="https://www.instagram.com/woody.grill.algiers/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/woodygrillalgiersturk" target="_blank"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+            <div class="foot-col">
+                <h3>Cash Only</h3>
+                <p>We accept DZD cash payments only.</p>
+            </div>
+        </div>
+        <p class="copyright">© 2026 Woody Grill Algérie. Authentic Turkish Dining.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
